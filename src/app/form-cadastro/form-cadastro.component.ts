@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
   selector: 'app-form-cadastro',
@@ -9,7 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class FormCadastroComponent implements OnInit{
   hide: boolean = true;
   dataSource!: FormGroup;
-  
+  router: any;
+
   ngOnInit(): void {
     this.dataSource = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -23,6 +25,10 @@ export class FormCadastroComponent implements OnInit{
     })
   }
 
+  constructor(private service: UsuariosService){
+
+  }
+
   getErrorMessage() {
     if (this.dataSource.value.email.hasError('required')) {
       return 'Campo obrigatório';
@@ -31,7 +37,9 @@ export class FormCadastroComponent implements OnInit{
     return this.dataSource.value.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  onSubmit(data: any){
+  onSubmit($event){
     console.log('submit!');
+    this.service.adicionar($event);
+    this.router.navigate(['/pagina-principal']);
   }
 }
