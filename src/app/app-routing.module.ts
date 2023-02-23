@@ -1,3 +1,4 @@
+import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormCadastroComponent } from './form-cadastro/form-cadastro.component';
@@ -8,6 +9,7 @@ import { PaginaPessoalComponent } from './pagina-pessoal/pagina-pessoal.componen
 import { PaginaSaudeComponent } from './pagina-saude/pagina-saude.component';
 
 const routes: Routes = [
+  {path: 'pagina-principal', component: PaginaPrincipalComponent},
   {path: 'pagina-pessoal', component: PaginaPessoalComponent},
   {path: 'pagina-alimentacao', component: PaginaAlimentacaoComponent},
   {path: 'pagina-exercicios', component: PaginaExercicioComponent},

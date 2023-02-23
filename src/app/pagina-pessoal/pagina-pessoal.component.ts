@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
   selector: 'app-pagina-pessoal',
@@ -10,4 +11,8 @@ export class PaginaPessoalComponent {
   idade = 20;
   peso = `77 kg`;
   altura = `195 cm`;
+
+  constructor(private service: UsuariosService){
+
+  }
 }
