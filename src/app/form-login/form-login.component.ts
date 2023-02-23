@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-login',
@@ -9,6 +10,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class FormLoginComponent {
   hide: boolean = true;
   dataSource!: FormGroup;
+  constructor(private router: Router){}
   
   ngOnInit(): void {
     this.dataSource = new FormGroup({
@@ -27,5 +29,6 @@ export class FormLoginComponent {
 
   onLogin(data: any){
     console.log('login!');
+    window.location.href = "/pagina-principal";
   }
 }

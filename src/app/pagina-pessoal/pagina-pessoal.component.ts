@@ -11,6 +11,13 @@ export class PaginaPessoalComponent {
   idade = 20;
   peso = `77 kg`;
   altura = `195 cm`;
+  pessoa = {
+    nome: `Leandro`,
+    idade: 20,
+    peso: `77 kg`,
+    altura: `195 cm`,
+    metas: [    ],
+  }
 
   constructor(private service: UsuariosService){
 
