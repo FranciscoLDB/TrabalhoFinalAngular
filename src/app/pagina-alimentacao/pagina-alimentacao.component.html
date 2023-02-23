@@ -1,15 +1,28 @@
 <main class="bg-dark text-light">
-    <header>
-        <h1>ALIMENTAÇÃO</h1>
-    </header>
-
     <section class="container">
-        
+        <section class="mb-4 row">
+            <app-card-meta class="col-lg-6" [desc]="'Calorias diarias'" [cor]="'#63B83F'" [progresso]="200" [is_input]="true"></app-card-meta>
+            <app-card-meta class="col-lg-6" [desc]="'Água diaria'" [cor]="'#38B6FF'" [progresso]="400" [is_input]="true"></app-card-meta>
+        </section>
         <section class="row row-cols-4">
-            <app-card-alimentacao class="col mb-4"
-            *ngFor="let item of alimentacao" 
+            <!--<div class="mb-4">
+                <div class="card mb-4 text-dark">
+                    <div class="card-body" style="height: 15rem;">
+                        <h3 class="card-title text-primary text-center">Adicionar calorias</h3>
+                        <mat-form-field appearance="outline" floatLabel="always" style="width: 100%;">
+                            <input matInput type="number" class="example-right-align" [(ngModel)]="kcal">
+                            <span matTextSuffix class="m-1">kcal</span>
+                        </mat-form-field>
+                        <button class="btn btn-primary col-12" (click)="addKcal()">
+                            Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>-->
+            <app-card-alimentacao class="mb-4"
+            *ngFor="let item of alimentacao"
             [dia]="item.dia"
-            [almoco]="item.almoco" 
+            [almoco]="item.almoco"
             [janta]="item.janta"></app-card-alimentacao>
         </section>
     </section>

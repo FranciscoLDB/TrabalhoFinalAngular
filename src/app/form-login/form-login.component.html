@@ -1,8 +1,7 @@
-<section class="container text-center">
+<form [formGroup]="dataSource" (ngSubmit)="onLogin(dataSource.value)" class="container text-center">
   <mat-form-field appearance="outline" class="col-6">
     <mat-label>Email</mat-label>
-    <input matInput placeholder="pat@example.com" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    <input matInput placeholder="pat@example.com" formControl="email" required>
     <mat-icon matSuffix>email</mat-icon>
   </mat-form-field>
   <br>
@@ -10,11 +9,11 @@
   <mat-form-field appearance="outline" class="col-6">
     <mat-label>Digite uma senha</mat-label>
     <input matInput [type]="hide ? 'password' : 'text'" required>
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <button mat-icon-button matSuffix formControl="senha" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   </mat-form-field>
   <br>
   
   <button mat-raised-button color="primary" class="col-6">Entrar</button>
-</section>
+</form>

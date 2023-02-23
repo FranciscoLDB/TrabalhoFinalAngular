@@ -23,6 +23,9 @@ import { PaginaAlimentacaoComponent } from './pagina-alimentacao/pagina-alimenta
 import { CardAlimentacaoComponent } from './card-alimentacao/card-alimentacao.component';
 import { PaginaExercicioComponent } from './pagina-exercicio/pagina-exercicio.component';
 import { PaginaSaudeComponent } from './pagina-saude/pagina-saude.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,7 @@ import { PaginaSaudeComponent } from './pagina-saude/pagina-saude.component';
     PaginaAlimentacaoComponent,
     CardAlimentacaoComponent,
     PaginaExercicioComponent,
-    PaginaSaudeComponent
+    PaginaSaudeComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,9 @@ import { PaginaSaudeComponent } from './pagina-saude/pagina-saude.component';
     MatInputModule,
     MatRadioModule,
     MatButtonModule,
+    MatDividerModule,
+    MatExpansionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

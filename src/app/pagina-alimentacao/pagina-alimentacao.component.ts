@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pagina-alimentacao',
@@ -15,4 +15,13 @@ export class PaginaAlimentacaoComponent {
     {dia: 'sabado', almoco: 'Nhoque de abóbora com molho de espinafre.', janta: 'sopa de feijão'},
     {dia: 'domingo', almoco: 'Espaguete de batata-doce com molho de tomate.', janta: 'arroz e frango grelhado'},
   ]
+  kcal: number = 20;
+  progresso: number = 300;
+  @Output() valorAlterado = new EventEmitter<number>();
+  
+  addKcal(){
+    console.log(this.kcal);
+    this.valorAlterado.emit(this.kcal);
+    return this.kcal + this.progresso;
+  }
 }

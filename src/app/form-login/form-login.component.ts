@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-form-login',
@@ -8,13 +8,24 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class FormLoginComponent {
   hide: boolean = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
+  dataSource!: FormGroup;
+  
+  ngOnInit(): void {
+    this.dataSource = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      senha: new FormControl('', [Validators.required]),
+    })
+  }
 
   getErrorMessage() {
-    if (this.email.hasError('required')) {
+    if (this.dataSource.value.email.hasError('required')) {
       return 'You must enter a value';
     }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+    return this.dataSource.value.email.hasError('email') ? 'Not a valid email' : '';
+  }
+
+  onLogin(data: any){
+    console.log('login!');
   }
 }
