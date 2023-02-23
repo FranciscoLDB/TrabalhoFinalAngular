@@ -1,17 +1,17 @@
 <main class="bg-dark">
-  <h1 class="text-white">BETTER HEALTH</h1>
+  <h1 class="text-white">{{ title }}</h1>
   <ul class="nav mb-5 justify-content-end">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" routerLink="/pagina-principal">Principal</a>
+      <a class="nav-link active" aria-current="page" routerLink="/pagina-principal" (click)="changeTitle('Better Health')">Principal</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="pagina-alimentacao">Alimentação</a>
+      <a class="nav-link" routerLink="pagina-alimentacao" (click)="changeTitle('Alimentação')">Alimentação</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="pagina-exercicios">Exercicios</a>
+      <a class="nav-link" routerLink="pagina-exercicios" (click)="changeTitle('Exercicios')">Exercicios</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="pagina-saude">Saude Mental</a>
+      <a class="nav-link" routerLink="pagina-saude" (click)="changeTitle('Saúde Mental')">Saude Mental</a>
     </li>
   </ul>
 
