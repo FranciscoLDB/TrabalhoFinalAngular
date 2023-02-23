@@ -1,8 +1,8 @@
 <main class="bg-dark text-light">
-    <section class="container">        
+    <section class="container">
         <section class="mb-4 row">
-            <app-card-meta class="col-lg-6" [desc]="'Calorias diarias'" [cor]="'#63B83F'" [progresso]="200"></app-card-meta>
-            <app-card-meta class="col-lg-6" [desc]="'Água diaria'" [cor]="'#38B6FF'" [progresso]="400"></app-card-meta>
+            <app-card-meta class="col-lg-6" [desc]="'Calorias diarias'" [cor]="'#63B83F'" [progresso]="200" [is_input]="true"></app-card-meta>
+            <app-card-meta class="col-lg-6" [desc]="'Água diaria'" [cor]="'#38B6FF'" [progresso]="400" [is_input]="true"></app-card-meta>
         </section>
         <section class="row row-cols-4">
             <!--<div class="mb-4">
@@ -20,9 +20,9 @@
                 </div>
             </div>-->
             <app-card-alimentacao class="mb-4"
-            *ngFor="let item of alimentacao" 
+            *ngFor="let item of alimentacao"
             [dia]="item.dia"
-            [almoco]="item.almoco" 
+            [almoco]="item.almoco"
             [janta]="item.janta"></app-card-alimentacao>
         </section>
     </section>

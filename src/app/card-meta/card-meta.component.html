@@ -5,7 +5,7 @@
     <div class="progress-bar" [ngStyle]="{'width': porcent, 'background-color': cor}"></div>
   </div>
 </div>
-<div class="input-group mb-3">
+<div class="input-group mb-3" *ngIf="is_input">
   <input type="number" class="form-control" [(ngModel)]="inputKcal">
   <button class="btn btn-outline-primary" (click)="atualizaProgresso(inputKcal)">Adicionar</button>
 </div>

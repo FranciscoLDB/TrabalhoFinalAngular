@@ -15,11 +15,12 @@ export class CardMetaComponent implements OnInit {
   @Input() cor = '';
   @Input() progresso = 0;
   @Input() meta = 2000;
+  @Input() is_input = false;
   bufferValue = 100;
   value = (this.progresso*100)/this.meta;
   porcent: string = this.value + '%';
   inputKcal: number = 0;
-  
+
   atualizaProgresso(kcal: number = 0){
     this.progresso += kcal
     this.value = (this.progresso*100)/this.meta;
