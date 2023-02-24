@@ -1,6 +1,6 @@
+import { UsuariosService } from './../services/usuarios.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
   selector: 'app-form-cadastro',
@@ -25,20 +25,10 @@ export class FormCadastroComponent implements OnInit{
     })
   }
 
-  constructor(){
-
-  }
-
-  getErrorMessage() {
-    if (this.dataSource.value.email.hasError('required')) {
-      return 'Campo obrigatório';
-    }
-
-    return this.dataSource.value.email.hasError('email') ? 'Not a valid email' : '';
-  }
+  constructor(private usuariosService: UsuariosService){ }
 
   onSubmit($event){
     console.log('submit!');
-    window.location.href = "/pagina-principal";
+    this.usuariosService.registrar($event);
   }
 }

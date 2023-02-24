@@ -27,6 +27,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -61,6 +64,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatExpansionModule,
     HttpClientModule,
     MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
