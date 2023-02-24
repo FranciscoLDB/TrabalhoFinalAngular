@@ -1,11 +1,12 @@
 <main class="bg-dark text-light">
   <section class="container">
       <section class="mb-4 row">
-          <app-card-meta class="col-lg-6" [desc]="'Meta semanal' | uppercase" [cor]="'#FFDE59'" [progresso]="2" [meta]="7"></app-card-meta>
+          <app-card-meta class="col-lg-6" [meta]="metaS"></app-card-meta>
+          <app-card-meta class="col-lg-6" [meta]="metaM"></app-card-meta>
       </section>
-      <section class="row">
+      <section class="row bg-dark">
           <div class="col-lg-4" *ngFor="let treino of treinos">
-            <mat-card class="example-card text-dark">
+            <mat-card class="example-card text-dark m-2">
               <mat-card-header class="mb-2">
                 <mat-card-title><b>Treino {{ treino.treino }}</b></mat-card-title>
               </mat-card-header>

@@ -1,28 +1,32 @@
 <main class="container">
   <section class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-4 mt-4">
       <mat-card class="example-card">
         <mat-card-header>
           <mat-card-title-group>
-            <h1>{{ nome }}</h1>
-            <mat-icon class="icone-card" aria-hidden="false" aria-label="Example home icon" fontIcon="account_circle"></mat-icon>
+            <h1>{{ pessoa.nome }}</h1>
+            <mat-icon class="icone-card" aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
           </mat-card-title-group>
         </mat-card-header>
         <mat-card-content>
-          <p>Idade: {{ idade }}</p>
-          <p>Altura: {{ altura }}</p>
-          <p>Peso: {{ peso }}</p>
+          <p>Idade: {{ pessoa.idade }}</p>
+          <p>Altura: {{ pessoa.altura }}</p>
+          <p>Peso: {{ pessoa.peso }}</p>
+          <p>Sexo: {{ pessoa.sexo }}</p>
+          <p>Objetivo: {{ pessoa.objetivo }}</p>
         </mat-card-content>
+        <mat-card-footer class="mt-2">
+          <button mat-button color="primary" class="col-12 pt-4 pb-4">Editar Metas
+            <mat-icon>edit</mat-icon>
+          </button>
+        </mat-card-footer>
       </mat-card>
     </div>
 
-    <div class="col-9">
-      <section class="row">
-        <app-card-meta class="col-lg-6 p-4" [desc]="'Calorias Diarias'" [cor]="'#63B83F'"></app-card-meta>
-        <app-card-meta class="col-lg-6 p-4" [desc]="'Calorias Semanais'" [cor]="'#63B83F'"></app-card-meta>
-        <app-card-meta class="col-lg-6 p-4" [desc]="'Água Diaria'" [cor]="'#38B6FF'"></app-card-meta>
-        <app-card-meta class="col-lg-6 p-4" [desc]="'Água Semanal'" [cor]="'#38B6FF'"></app-card-meta>
-        <app-card-meta class="col-lg-6 p-4" [desc]="'Excercicios semanais'" [cor]="'#FFDE59'"></app-card-meta>
+    <div class="col-lg-8 mt-4">
+      <h1 class="h1__metas ms-2">Metas:</h1>
+      <section class="row bg-dark">
+        <app-card-meta class="col-lg-6 p-4" *ngFor="let meta of pessoa.metas" [meta]="meta"></app-card-meta>
       </section>
     </div>
   </section>
