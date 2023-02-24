@@ -4,6 +4,9 @@
           <app-card-meta class="col-lg-6" [meta]="metaS"></app-card-meta>
           <app-card-meta class="col-lg-6" [meta]="metaM"></app-card-meta>
       </section>
+      <div class="loader" *ngIf="nenhumExercicio">
+        <mat-spinner></mat-spinner>
+      </div>
       <section class="row bg-dark">
           <div class="col-lg-4" *ngFor="let treino of treinos">
             <mat-card class="example-card text-dark m-2">

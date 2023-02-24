@@ -21,6 +21,8 @@ export class PaginaPessoalComponent {
       { desc: 'Água Semanal', cor: '#38B6FF', progresso: 8500, meta: 14000},
       { desc: 'Excercicios Semanais', cor: '#FFDE59', progresso: 4, meta: 7},
       { desc: 'Excercicios Mensais', cor: '#FFDE59', progresso: 12, meta: 25},
+      { desc: 'Sono Semanal', cor: '#750FF5', progresso: 32, meta: 49},
+      { desc: 'Sono Mensal', cor: '#750FF5', progresso: 182, meta: 210},
     ],
   }
 
