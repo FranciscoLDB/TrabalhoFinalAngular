@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
   selector: 'app-form-login',
@@ -10,26 +11,18 @@ import { Router } from '@angular/router';
 export class FormLoginComponent {
   hide!: boolean;
   dataSource!: FormGroup;
-  constructor(private router: Router){}
+  constructor(private router: Router, private usuariosService: UsuariosService){}
 
   ngOnInit(): void {
     this.hide = true;
     this.dataSource = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
-      senha: new FormControl('', [Validators.required]),
+      senha: new FormControl('', [Validators.required, Validators.minLength(6)]),
     })
   }
 
-  getErrorMessage() {
-    if (this.dataSource.value.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.dataSource.value.email.hasError('email') ? 'Not a valid email' : '';
-  }
-
-  onLogin(data: any){
+  onLogin($event){
     console.log('login!');
-    window.location.href = "/pagina-principal";
+    this.usuariosService.logar($event);
   }
 }
