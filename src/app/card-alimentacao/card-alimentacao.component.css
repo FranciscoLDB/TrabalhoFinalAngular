@@ -1,7 +1,11 @@
 .card{
-    height: 15rem;
+  height: 15rem;
 }
 mat-icon{
-    position: absolute;
-    right: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+h5{
+  color: #725ff5;
 }

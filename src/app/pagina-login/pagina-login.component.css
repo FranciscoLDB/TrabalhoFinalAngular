@@ -1,60 +1,61 @@
 .section__login{
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 .section__login__info, .section__login__form{
-    min-width: min-content;
-    width: 50vw;
-    height: 100vh;
+  min-width: min-content;
+  width: 50vw;
+  height: 100vh;
 }
 
 .section__login__info__div{
-    position: relative;
-    top: 20%;
-    margin-left: 20px;
-    margin-right: 20px;
+  position: relative;
+  top: 20%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 h1{
-    font-size: 4.0rem;
+  font-size: 4.0rem;
 }
 
 i{
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .section__login__form__header{
-    padding: 2rem;
-    height: 15%;
+  padding: 2rem;
+  height: 15%;
+  background-color: #725ff5;
 }
 
 .section__login__form__header > a{
-    text-decoration: 0;
+  text-decoration: 0;
 }
 
 a{
-    color: black;
+  color: black;
 }
 a:hover{
-    cursor: pointer;
-    opacity: 0.5;
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .desenho{
-    position: absolute;
-    bottom: -7rem;
-    left: -8rem;
-    content: "";
-    width: 20rem;
-    height: 20rem;
-    background-color: #FFC107;
-    border-radius: 100%;
+  position: absolute;
+  bottom: -7rem;
+  left: -8rem;
+  content: "";
+  width: 20rem;
+  height: 20rem;
+  background-color: #725ff5;
+  border-radius: 100%;
 }
 
 .desenho__2{
-    top: -12rem;
-    left: 24%;
-    opacity: 0.8;
-    z-index: 1;
+  top: -12rem;
+  left: 24%;
+  opacity: 0.8;
+  z-index: 1;
 }
