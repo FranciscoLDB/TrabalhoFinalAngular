@@ -1,5 +1,5 @@
 # TrabalhoFinalAngular
 
 Alunos:
-Francisco Luis Dunaiski Bruginski
-Leandro Renato Nogarotto
+## Francisco Luis Dunaiski Bruginski
+## Leandro Renato Nogaroto
