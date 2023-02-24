@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./pagina-principal.component.css']
 })
 export class PaginaPrincipalComponent {
-  title = 'Better Health';
+  title = 'Vision Life';
 
   changeTitle (novoTitle:string) {
     this.title = novoTitle;
