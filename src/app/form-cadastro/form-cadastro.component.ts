@@ -25,7 +25,7 @@ export class FormCadastroComponent implements OnInit{
     })
   }
 
-  constructor(private service: UsuariosService){
+  constructor(){
 
   }
 
@@ -39,7 +39,6 @@ export class FormCadastroComponent implements OnInit{
 
   onSubmit($event){
     console.log('submit!');
-    this.service.adicionar($event);
     this.router.navigate(['/pagina-principal']);
   }
 }

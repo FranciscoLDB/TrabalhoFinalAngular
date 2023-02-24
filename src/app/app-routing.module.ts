@@ -11,10 +11,11 @@ import { PaginaLoginComponent } from './pagina-login/pagina-login.component';
 
 const routes: Routes = [
   {path: '', component: PaginaLoginComponent, children: [
+    { path: '',   redirectTo: '/Login', pathMatch: 'full'},
     {path: 'Login', component: FormLoginComponent},
     {path: 'Cadastro', component: FormCadastroComponent},
   ]},
-  {path: 'pagina-principal', 
+  {path: 'pagina-principal',
     component: PaginaPrincipalComponent,
     children: [
       {path: '', component: PaginaPessoalComponent},
@@ -22,7 +23,7 @@ const routes: Routes = [
       {path: 'pagina-exercicios', component: PaginaExercicioComponent},
       {path: 'pagina-saude', component: PaginaSaudeComponent},
     ]},
-  
+
 ];
 
 @NgModule({

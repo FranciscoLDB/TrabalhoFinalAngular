@@ -24,6 +24,6 @@ export class PaginaPessoalComponent {
     ],
   }
 
-  constructor(private service: UsuariosService){
+  constructor(){
   }
 }
