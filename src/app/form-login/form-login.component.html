@@ -1,7 +1,7 @@
 <form [formGroup]="dataSource" (ngSubmit)="onLogin(dataSource.value)" class="container text-center">
   <mat-form-field appearance="outline" class="col-6">
     <mat-label>Email</mat-label>
-    <input matInput placeholder="pat@example.com" formControl="email" required>
+    <input matInput placeholder="pat@example.com" formControlName="email" required>
     <mat-icon matSuffix>email</mat-icon>
   </mat-form-field>
   <br>
@@ -9,7 +9,7 @@
   <mat-form-field appearance="outline" class="col-6">
     <mat-label>Digite uma senha</mat-label>
     <input matInput [type]="hide ? 'password' : 'text'" required>
-    <button mat-icon-button matSuffix formControl="senha" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <button mat-icon-button matSuffix formControlName="senha" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   </mat-form-field>
