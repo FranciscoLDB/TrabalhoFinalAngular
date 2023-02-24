@@ -39,6 +39,6 @@ export class FormCadastroComponent implements OnInit{
 
   onSubmit($event){
     console.log('submit!');
-    this.router.navigate(['/pagina-principal']);
+    window.location.href = "/pagina-principal";
   }
 }

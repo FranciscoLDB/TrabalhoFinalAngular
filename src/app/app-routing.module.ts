@@ -24,6 +24,7 @@ const routes: Routes = [
       {path: 'pagina-exercicios', component: PaginaExercicioComponent},
       {path: 'pagina-saude', component: PaginaSaudeComponent},
     ]},
+  {path: '**',   redirectTo: '/pagina-login', pathMatch: 'full'},
 
 ];
 
