@@ -15,10 +15,12 @@ export class PaginaAlimentacaoComponent {
     {dia: 'sabado', almoco: 'Nhoque de abóbora com molho de espinafre.', janta: 'sopa de feijão'},
     {dia: 'domingo', almoco: 'Espaguete de batata-doce com molho de tomate.', janta: 'arroz e frango grelhado'},
   ]
+  metaD = {desc: 'Calorias diarias', cor: '#63B83F', progresso: 200, meta: 2000, is_input: true};
+  metaS = {desc: 'Água diaria', cor: '#38B6FF', progresso: 1000, meta: 2400, is_input: true};
   kcal: number = 20;
   progresso: number = 300;
   @Output() valorAlterado = new EventEmitter<number>();
-  
+
   addKcal(){
     console.log(this.kcal);
     this.valorAlterado.emit(this.kcal);

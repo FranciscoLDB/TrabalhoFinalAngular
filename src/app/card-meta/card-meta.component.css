@@ -11,5 +11,15 @@
   margin: 0;
 }
 
+.btn-outline-primary {
+  --bs-btn-color: #725ff5;
+  --bs-btn-border-color: #725ff5;
+  --bs-btn-hover-bg: #725ff5;
+  --bs-btn-hover-border-color: #725ff5;
+  --bs-btn-active-bg: #725ff5;
+  --bs-btn-active-border-color: #725ff5;
+  --bs-btn-disabled-color: #725ff5;
+  --bs-btn-disabled-border-color: #725ff5;
+}
 
 

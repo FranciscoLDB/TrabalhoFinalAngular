@@ -1,9 +1,9 @@
 <div class="card text-dark">
     <div class="card-body">
-      <h5 class="card-title text-primary">{{ dia | uppercase }} <span *ngIf="isToday"><mat-icon>assignment_turned_in</mat-icon></span></h5>
-      <h6 class="card-subtitle mb-2 text-muted">Almoço</h6>
+      <h5 class="card-title">{{ dia | uppercase }} <span *ngIf="isToday"><mat-icon>assignment_turned_in</mat-icon></span></h5>
+      <h5 class="card-subtitle text-dark mb-2">Almoço:</h5>
       <p class="card-text">{{ almoco }}</p>
-      <h6 class="card-subtitle mb-2 text-muted">Janta</h6>
+      <h5 class="card-subtitle text-dark mb-2">Janta:</h5>
       <p class="card-text">{{ janta }}</p>
     </div>
 </div>

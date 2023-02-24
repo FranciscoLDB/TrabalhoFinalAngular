@@ -7,23 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardMetaComponent implements OnInit {
   ngOnInit(){
-    this.value = (this.progresso*100)/this.meta;
+    this.value = (this.meta.progresso*100)/this.meta.meta;
     this.porcent = this.value + '%';
   }
-
-  @Input() desc = 'Calorias diarias';
-  @Input() cor = '';
-  @Input() progresso = 0;
-  @Input() meta = 2000;
-  @Input() is_input = false;
+  @Input() meta = {desc: '', cor: '', progresso: 200, meta: 2000, is_input: false};
   bufferValue = 100;
-  value = (this.progresso*100)/this.meta;
+  value = (this.meta.progresso*100)/this.meta.meta;
   porcent: string = this.value + '%';
   inputKcal: number = 0;
 
   atualizaProgresso(kcal: number = 0){
-    this.progresso += kcal
-    this.value = (this.progresso*100)/this.meta;
+    this.meta.progresso += kcal
+    this.value = (this.meta.progresso*100)/this.meta.meta;
     this.porcent = this.value + '%';
   }
 }

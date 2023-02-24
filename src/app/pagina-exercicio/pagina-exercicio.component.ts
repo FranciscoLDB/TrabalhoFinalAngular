@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./pagina-exercicio.component.css']
 })
 export class PaginaExercicioComponent {
+  metaS = {desc: 'Meta Semanal', cor: '#FFDE59', progresso: 4, meta: 7, is_input: false};
+  metaM = {desc: 'Meta Mensal', cor: '#FFDE59', progresso: 12, meta: 25, is_input: false};
   treinos = [
     { treino: "A", exercicios: [
       {

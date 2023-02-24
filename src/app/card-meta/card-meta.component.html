@@ -1,11 +1,11 @@
 <div class="card-meta">
-  <h3><b>{{ desc }}</b></h3>
-  <h6>Progresso: {{ progresso }} / {{ meta }}</h6>
+  <h3><b>{{ meta.desc }}</b></h3>
+  <h6>Progresso: {{ meta.progresso }} / {{ meta.meta }}</h6>
   <div class="progress barra col-6" role="progressbar" aria-label="Basic example" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar" [ngStyle]="{'width': porcent, 'background-color': cor}"></div>
+    <div class="progress-bar" [ngStyle]="{'width': porcent, 'background-color': meta.cor}"></div>
   </div>
 </div>
-<div class="input-group mb-3" *ngIf="is_input">
+<div class="input-group mb-3" *ngIf="meta.is_input">
   <input type="number" class="form-control" [(ngModel)]="inputKcal">
   <button class="btn btn-outline-primary" (click)="atualizaProgresso(inputKcal)">Adicionar</button>
 </div>

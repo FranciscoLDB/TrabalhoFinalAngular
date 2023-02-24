@@ -2,12 +2,21 @@ main{
   height: 100%;
   width: 100%;
 }
-h1{
-  position: absolute;
-  left: 50px;
-  top: 8px;
+.brand-nav{
+  margin-left: 20px;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+.navbar-dark{
+  background-color: #725ff5;
+  color: #252525;
 }
 
 .nav-item{
   font-size: xx-large;
+}
+
+.nav-link{
+  font-weight: 500;
 }

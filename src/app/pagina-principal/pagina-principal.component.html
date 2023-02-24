@@ -1,24 +1,30 @@
 <main class="bg-dark">
-  <h1 class="text-white">{{ title }}</h1>
-  <ul class="nav mb-5 justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" routerLink="/pagina-principal" (click)="changeTitle('Better Health')">Principal</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="pagina-alimentacao" (click)="changeTitle('Alimentação')">Alimentação</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="pagina-exercicios" (click)="changeTitle('Exercicios')">Exercicios</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="pagina-saude" (click)="changeTitle('Saúde Mental')">Saude Mental</a>
-    </li>
-  </ul>
+  <nav class="navbar navbar-dark navbar-expand-lg mb-3">
+    <div class="container-fluid">
+      <span class="navbar-brand brand-nav">{{ title | uppercase }}</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse justify-content-end navbar-collapse" id="navbarText">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/pagina-principal" (click)="changeTitle('Better Health')">Principal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="pagina-alimentacao" (click)="changeTitle('Alimentação')">Alimentação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="pagina-exercicios" (click)="changeTitle('Exercicios')">Exercicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="pagina-saude" (click)="changeTitle('Saúde Mental')">Saude Mental</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <section>
-    <router-outlet></router-outlet>
-  </section>
-
+  <router-outlet class="bg-dark"></router-outlet>
 </main>
 
 

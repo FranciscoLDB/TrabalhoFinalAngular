@@ -1,5 +1,5 @@
 .example-card {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .icone-card{
@@ -8,4 +8,8 @@
   height: 50px;
   width: 50px;
   font-size: 50px;
+}
+.h1__metas{
+  color: #725ff5;
+  font-weight: 700;
 }
