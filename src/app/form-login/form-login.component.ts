@@ -8,11 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./form-login.component.css']
 })
 export class FormLoginComponent {
-  hide: boolean = true;
+  hide!: boolean;
   dataSource!: FormGroup;
   constructor(private router: Router){}
-  
+
   ngOnInit(): void {
+    this.hide = true;
     this.dataSource = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       senha: new FormControl('', [Validators.required]),

@@ -12,6 +12,9 @@ export class PaginaPrincipalComponent {
     this.title = novoTitle;
     console.log('change title to: ' + novoTitle);
   }
+  sair(){
+    window.location.href = "/";
+  }
 }
 
 

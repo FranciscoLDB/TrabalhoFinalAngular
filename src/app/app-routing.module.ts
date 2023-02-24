@@ -10,8 +10,9 @@ import { PaginaSaudeComponent } from './pagina-saude/pagina-saude.component';
 import { PaginaLoginComponent } from './pagina-login/pagina-login.component';
 
 const routes: Routes = [
-  {path: '', component: PaginaLoginComponent, children: [
-    { path: '',   redirectTo: '/Login', pathMatch: 'full'},
+  {path: '',   redirectTo: '/pagina-login', pathMatch: 'full'},
+  {path: 'pagina-login', component: PaginaLoginComponent, children: [
+    {path: '',   redirectTo: '/Login', pathMatch: 'full'},
     {path: 'Login', component: FormLoginComponent},
     {path: 'Cadastro', component: FormCadastroComponent},
   ]},

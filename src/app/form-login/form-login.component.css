@@ -15,7 +15,10 @@ input.example-right-align {
   -moz-appearance: textfield;
 }
 
-section{
+form{
   position: relative;
   top: 10%;
+  background-color: #fff;
+  padding: 10px;
+  min-width: 450px;
 }
