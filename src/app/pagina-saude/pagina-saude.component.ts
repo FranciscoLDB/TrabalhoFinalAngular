@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./pagina-saude.component.css']
 })
 export class PaginaSaudeComponent {
-
+  data = new Date();
 }
